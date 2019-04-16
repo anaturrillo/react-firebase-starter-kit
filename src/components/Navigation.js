@@ -13,6 +13,9 @@ const AuthUserNav = () => {
       <li>
         <Link to={ROUTES.HOME}>Home</Link>
       </li>
+      <li>
+        <Link to={ROUTES.ACCOUNT}>Account</Link>
+      </li>
     </ul>
     <SignOut />
   </div>
@@ -23,9 +26,6 @@ const NotAuthUserNav = () => {
     <ul>
       <li>
         <Link to={ROUTES.LANDING}>Inicio</Link>
-      </li>
-      <li>
-        <Link to={ROUTES.HOME}>Home</Link>
       </li>
       <li>
         <Link to={ROUTES.SIGN_IN}>Sign In</Link>

@@ -10,7 +10,11 @@ class PasswordChangeFormBase extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-
+    this.props.firebase.passwordUpdate(this.state.passwordOne)
+      .then(result => {
+        this.setState({...INITIAL_STATE})
+      })
+      .catch(error => this.setState({error}))
   };
 
   onChange = e => {
@@ -42,7 +46,7 @@ class PasswordChangeFormBase extends Component {
   }
 }
 
-const PasswordChangeForm = () => withFirebase(PasswordChangeFormBase);
+const PasswordChangeForm = withFirebase(PasswordChangeFormBase);
 
 const PasswordChangePage = () => {
   return <div>
