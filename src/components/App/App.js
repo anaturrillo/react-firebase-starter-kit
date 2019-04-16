@@ -21,6 +21,7 @@ const App = () => {
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+        <Route path={ROUTES.PASSWORD_CHANGE} component={PasswordChangePage} />
       </Router>
 };
 
