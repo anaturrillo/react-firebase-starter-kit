@@ -22,11 +22,11 @@ class Firebase {
 
   signOut = () => this.auth.signOut();
 
-  passwordUpdateEmail = () => this.auth.sendPasswordResetEmail();
+  passwordReset = (email) => this.auth.sendPasswordResetEmail(email);
 
   passwordUpdate = (password) => {
     return this.auth.currentUser.updatePassword(password);
-  }
+  };
 
   confirmEmail = () => this.auth.currentUser.sendEmailVerification()
 }

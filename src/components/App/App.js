@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Navigation from '../Navigation'
-import * as ROUTES from './../../constants/routes'
-import Home from './../Home'
-import SignInPage from './../SignIn'
-import SignUpPage from './../SignUp'
-import Landing from './../Landing'
+import * as ROUTES from '../../constants/routes'
+import Home from '../Home'
+import SignInPage from '../SignIn'
+import SignUpPage from '../SignUp'
+import PasswordForgetPage from '../PasswordForget'
+import PasswordChangePage from '../PasswordChange'
+import Landing from '../Landing'
+
 import {authenticationProvider} from '../Session'
 
 const App = () => {
@@ -18,6 +20,7 @@ const App = () => {
         <Route path={ROUTES.HOME} component={Home} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       </Router>
 };
 

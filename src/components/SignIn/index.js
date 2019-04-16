@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import {SignUpLink} from './../SignUp'
+import {PasswordForgetLink} from '../PasswordForget'
 import {withFirebase} from './../Firebase'
-import {Link, withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import * as ROUTES from './../../constants/routes'
+
 
 const INITIAL_STATE = {
   email: '',
@@ -63,6 +65,7 @@ const SignInPage = () => {
     <h1>Sign In</h1>
     <SignInForm />
     <SignUpLink/>
+    <PasswordForgetLink/>
   </div>
 };
 
